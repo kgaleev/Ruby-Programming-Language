@@ -24,8 +24,7 @@ puts "hi, " + name + ", how are you?"
 empty_line
 ###############################################################
 friends = Array["Kevin", "Oscar"] # same as just friends = ["Kevin", "Oscar"]
-
-puts friends[0, 2] # range from 0 to 2 not including 2
+puts friends[0, 2] # range from 0 to 2, not including 2
 empty_line
 ###############################################################
 states = {
@@ -34,14 +33,14 @@ states = {
   :Pennsylvania => "PE"
 } # keys can be of many types in one hash
 
-puts states[1], states[:Pennsylvania]
+puts states[1], states[:Pennsylvania] # give key, get value
 empty_line
 
 states.each do |key, value|
   unless key=="New York"
     puts states[key]
   end
-end
+end # get some (not all) values from hash; same as previous puts
 empty_line
 ###############################################################
 puts "command: hash_difference = { \"a\":1, \"b\" => 2 }"
@@ -54,7 +53,7 @@ def sayhi
   puts "hi"
 end
 
-sayhi
+sayhi # call method without wrapping in variable
 empty_line
 ###############################################################
 def sayhi1(name="Billy", age=30)
@@ -62,14 +61,14 @@ def sayhi1(name="Billy", age=30)
 end
 
 sayhi1
-sayhi1("Jim", "40")
+sayhi1("Jim", "40") # change method arguments without wrapping in variable
 empty_line
 ###############################################################
 def multi(a, b)
   return a*b # can be return a*b, 70 -- then it will be array we can get value from multi(2,3)[1]
-  puts "5"
+  puts "5" # return brakes method, only a*b is executed
 end
 
-puts multi(2,3) # only a*b is executed, return breaks method
+puts multi(2,3) # get 6, no puts "5"
 empty_line
 ###############################################################
