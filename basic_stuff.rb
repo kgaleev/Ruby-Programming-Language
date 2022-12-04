@@ -20,11 +20,17 @@ empty_line
 ###############################################################
 puts "enter name"
 name = gets.chomp() # doesn't matter if with () or without if no argument given
+#if new line needed after gets, then no .chomp
 puts "hi, " + name + ", how are you?"
 empty_line
 ###############################################################
 friends = Array["Kevin", "Oscar"] # same as just friends = ["Kevin", "Oscar"]
 puts friends[0, 2] # range from 0 to 2, not including 2
+empty_line
+###############################################################
+str = "Hello there"
+str.downcase!
+puts str[6] # can adress to string like it's array -- output: t
 empty_line
 ###############################################################
 states = {
@@ -40,7 +46,7 @@ states.each do |key, value|
   unless key=="New York"
     puts states[key]
   end
-end # get some (not all) values from hash; same as previous puts
+end # get some (not all) values from hash; same output as in previous puts
 empty_line
 ###############################################################
 puts "command: hash_difference = { \"a\":1, \"b\" => 2 }"
@@ -67,8 +73,18 @@ empty_line
 def multi(a, b)
   return a*b # can be return a*b, 70 -- then it will be array we can get value from multi(2,3)[1]
   puts "5" # return brakes method, only a*b is executed
+  # can get multiple return -- return a*a, b*b -- result in array
 end
 
-puts multi(2,3) # get 6, no puts "5"
+puts multi(2,3) # get 6; puts "5" not displayed
+empty_line
+###############################################################
+temp = "7"; temp += "2"; puts temp # it's temp = temp + "2" -- so 72
+empty_line
+###############################################################
+def sum(a, b=8) # 8 is the default value of {b}, if {b} isn't entered when calling method
+  puts a+b
+end
+sum(3)
 empty_line
 ###############################################################
