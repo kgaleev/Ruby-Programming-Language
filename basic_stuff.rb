@@ -70,6 +70,12 @@ sayhi1
 sayhi1("Jim", "40") # change method arguments without wrapping in variable
 empty_line
 ###############################################################
+def method_with_one_arg(hash_as_arg) # one argument
+  puts hash_as_arg
+end
+method_with_one_arg(a:1) # hash can be used as one argument
+empty_line
+###############################################################
 def multi(a, b)
   return a*b # can be return a*b, 70 -- then it will be array we can get value from multi(2,3)[1]
   puts "5" # return brakes method, only a*b is executed
