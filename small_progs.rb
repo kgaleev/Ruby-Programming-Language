@@ -18,3 +18,15 @@ end
 puts "factorial = #{fact(6)}"
 puts
 ###############################################################
+# existing method can be used inside {initialize}
+class Test
+  def initialize x
+    self.calc x
+  end
+  def calc y
+    puts y*4
+  end
+end
+puts "#{t = Test.new 2}"
+puts
+###############################################################
